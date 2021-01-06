@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css?family=Boogaloo');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family:  'Sans-serif', cursive;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.pannel-bg {
+    width: 100vw;
+    height: 100vh;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    background: linear-gradient(to right, #FFFFFF, #ff0000);
+    flex-wrap: wrap;
+}
+
+.info-line {
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+.pokeball-container {
+    width: 120vw;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.pannel {
+    width: 50vw;
+    height: 45vh;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: 0.5s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform: translateY(-70%);
+}
+
+.pannel.active {
+    transition: 0.4s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transform: translateY(0%);
+}
+
+@-webkit-keyframes rotate {
+    0%,
+    100% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.text {
+    margin: auto;
+    color: #ffffff;
+    font-size: 1.4em;
+    margin-top: 5vh;
+    text-shadow: 0 0 4px #dddddd;
+    -moz-animation: blink 1s infinite 0s;
+    -webkit-animation: blink 1s infinite 0s;
+    animation: blink 1s infinite 0s;
+}
+
+@-webkit-keyframes blink {
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.card {
+    width: 40vw;
+    background: #fff;
+    border-radius: 10px;
+    align-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+/* POKEBALL
+==========================================================*/
+.rotate>.pokeball-container >#ajaxButton{
+    animation: rotate 0.5s linear infinite;
+    box-shadow:0 0 0 0 ;
+}
+.pokeball {
+    width: 7vw;
+    height: auto;
+    cursor: pointer;
+    border-radius: 80%;
+    margin: auto;
+    box-shadow: 0 15px 25px -10px rgba(0, 0, 0, 0.5);
+    transition: 0.4s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.pannel:hover .pokeball {
+    transform: translateY(-8px);
+    box-shadow: 0 17px 25px -6px rgba(0, 0, 0, 0.5);
+}
+
+.pokemon {
+    max-width: 150px;
+    height: auto;
+    transition: 0.4s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+/* POKEMON INFO
+  ==========================================================*/
+
+.pokemon-img {
+    width: 20vw;
+    margin: auto;
+}
+
+.pokemon-info-lines {
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    align-content: center;
+    align-items: center;
+    /* transform: translateY(-120%); */
+}
+
+.content {
+    width: 40vw;
+    margin: 0 30vw 0 30vw;
+    background: rgba(255, 255, 255, 0.6);
+    height: 55vh;
+    padding: 5vh;
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.4s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    box-shadow: 5px 15px 25px -10px rgba(0, 0, 0, 0.5);
+    transform: translateY(-120%);
+}
+
+.content.active {
+    transform: translateY(0);
+}
+.pokemon-name {
+    color: #000;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.4s all cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+
